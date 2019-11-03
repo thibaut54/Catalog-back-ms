@@ -64,10 +64,10 @@ public class ProductController {
 	}
 
 	@DeleteMapping("product")
-	public void delete( @RequestBody ProductDto productDto, HttpServletResponse response ){
+	public void delete( @PathVariable("id") Long id, HttpServletResponse response ){
 		try {
-			RestPreconditions.checkFound(  productDto );
-			productService.delete( productDto );
+			RestPreconditions.checkFound(  id );
+			productService.delete( id );
 			eventPublisher.publishEvent( new SingleResourceRetrievedEvent(this, response) );
 		}
 		catch ( MyResourceNotFoundException ex ){

@@ -43,8 +43,8 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public void delete( ProductDto productDto ){
-		 productRepository.delete( productDtoToEntity.apply( productDto ) );
+	public void delete( Long id ){
+		 productRepository.delete( productRepository.findById( id ).orElse( null ) );
 	}
 
 	@Override

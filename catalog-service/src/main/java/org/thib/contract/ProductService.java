@@ -12,7 +12,7 @@ public interface ProductService {
 
 	ProductDto save( ProductDto productDto );
 
-	void delete( ProductDto productDto );
+	void delete( Long id );
 
 	void deleteList( List< Long > idList );
 }
