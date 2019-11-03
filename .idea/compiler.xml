@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="catalog-microservice" />
+        <module name="catalog-service" />
+        <module name="catalog-utils" />
+        <module name="catalog-repository" />
+        <module name="catalog-domain" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="catalog" target="1.8" />
+      <module name="catalog-domain" target="1.8" />
+      <module name="catalog-microservice" target="1.8" />
+      <module name="catalog-repository" target="1.8" />
+      <module name="catalog-service" target="1.8" />
+      <module name="catalog-utils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="catalog" options="-parameters" />
+      <module name="catalog-domain" options="-parameters" />
+      <module name="catalog-microservice" options="-parameters" />
+      <module name="catalog-repository" options="-parameters" />
+      <module name="catalog-service" options="-parameters" />
+      <module name="catalog-utils" options="-parameters" />
+    </option>
+  </component>
+</project>

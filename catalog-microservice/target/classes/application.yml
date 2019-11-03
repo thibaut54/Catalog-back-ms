@@ -1,0 +1,23 @@
+
+server:
+  port: 8080
+
+spring:
+    main:
+        allow-bean-definition-overriding: true
+
+    datasource:
+        driverClassName: org.postgresql.Driver
+        url: jdbc:postgresql://localhost:5432/db_product
+        username: admin_pdt
+        password: 123
+
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        hibernate:
+            ddl-auto: update
+        properties:
+            hibernate:
+                temp:
+                    use_jdbc_metadata_defaults: false
+        show-sql: true
